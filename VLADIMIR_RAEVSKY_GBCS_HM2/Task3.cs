@@ -10,7 +10,7 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
     {
         static void VarSum(int number)
         {
- 
+
             int sum = 0;
             while (number != 0)
             {
@@ -20,9 +20,9 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
                 }
                 number = int.Parse(Console.ReadLine());
             }
-             Console.WriteLine($"Result is: {sum}");
+            Console.WriteLine($"Result is: {sum}");
         }
-        
+
     }
 
 }

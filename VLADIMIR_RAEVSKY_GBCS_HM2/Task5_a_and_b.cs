@@ -10,7 +10,7 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
     {
         static void BMIMod(double weight)
         {
-            const double  INDEXREF = 21.745; //Эталон индекса массы тела
+            const double INDEXREF = 21.745; //Эталон индекса массы тела
 
             Console.Write("Enter your height: ");
 
