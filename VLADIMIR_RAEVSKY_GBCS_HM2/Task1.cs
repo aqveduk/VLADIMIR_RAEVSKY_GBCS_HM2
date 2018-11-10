@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+ * 
+    Vladimir Raevskiy
+    Второй урок
+    TASK1 - ПОИСК МИНИМАЛЬНОГО ЗНАЧЕНИЯ
+    TASK2 - СЛОЖЕНИЕ ВСЕХ СОСТАВЛЯЮЩИХ ЧИСЛА
+    TASK3 - СУММА ВСЕХ ПОЛОЖИЬЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
+    TASK4 - ВВОД ЛОГИНА И ПАРОЛЯ
+*
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,31 +70,27 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
                     Task3();
                     break;
                 case 4:
-                    //Task4();
-
+                    Task4();
                     break;
                 case 5:
-                    //Task5();
 
-                    break;
                 case 6:
-                    //Task6();
 
-                    break;
                 case 7:
-                    //Task7();
-
+                    Print("Will be ready soon.");
+                    break;
+                default:
+                    Print("Incorrect input");
                     break;
 
             }
-
+            
             Pause();
-
         }
 
         static void Task1()
         {
-            //FIRST TASK 
+            //FIRST TASK -  ПОИСК МИНИМАЛЬНОГО ЗНАЧЕНИЯ
             Print("Enter the first value: ");
             int first = int.Parse(Console.ReadLine());
 
@@ -98,7 +105,7 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
 
         static void Task2()
         {
-            //SECOND TASK
+            //SECOND TASK  - СЛОЖЕНИЕ ВСЕХ СОСТАВЛЯЮЩИХ ЧИСЛА
             Print("Enter the  value to count digits on it: ");
             int digit = int.Parse(Console.ReadLine());
             DigitCount(digit);
@@ -106,9 +113,18 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
 
         static void Task3()
         {
+            //THIRD TASK  - СУММА ВСЕХ ПОЛОЖИЬЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
             Print("Enter values to calculate the sum of all positive odd numbers: ");
             int value = int.Parse(Console.ReadLine());
             VarSum(value);
+        }
+
+        static void Task4()
+        {   
+            //FORTH TASK -  ВВОД ЛОГИНА И ПАРОЛЯ
+            Console.Write("Welcome to login window.\nTo sign-up into the system use your username: ");
+            string username = Console.ReadLine();
+            LoginForm(username);
         }
     }
 }
