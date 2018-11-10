@@ -6,6 +6,7 @@
     TASK2 - СЛОЖЕНИЕ ВСЕХ СОСТАВЛЯЮЩИХ ЧИСЛА
     TASK3 - СУММА ВСЕХ ПОЛОЖИЬЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
     TASK4 - ВВОД ЛОГИНА И ПАРОЛЯ
+    TASK5 - ИМТ С УКАЗАНИЕМ РАЗНИЦЫ
 *
 */
 
@@ -21,22 +22,6 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
     {
         static void Pause(string message = "Press any key to continue") { Console.Write(message); Console.ReadKey(); }
         static void Print(string text) { Console.WriteLine(text); }
-
-        public static int IntChecker()
-        {
-            while (true)
-            {
-                String input = Console.ReadLine();
-                if (Int32.TryParse(input, out int result))
-                {
-                    return result;
-                }
-                else
-                {
-                    Print("Please enter the interger number:\n");
-                }
-            }
-        }
 
         static void Minimum(int first, int second, int third) {
             int min;
@@ -73,7 +58,8 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
                     Task4();
                     break;
                 case 5:
-
+                    Task5();
+                    break;
                 case 6:
 
                 case 7:
@@ -125,6 +111,15 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
             Console.Write("Welcome to login window.\nTo sign-up into the system use your username: ");
             string username = Console.ReadLine();
             LoginForm(username);
+        }
+
+        static void Task5()
+        {
+            //FIFTH TASK - ИМТ С УКАЗАНИЕМ РАЗНИЦЫ
+            Console.Write("Welcome to BMI index calculatoin.\nEnter your weight: ");
+            double weight = Double.Parse(Console.ReadLine());
+            BMIMod(weight);
+            
         }
     }
 }
