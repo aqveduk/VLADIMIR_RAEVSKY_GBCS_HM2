@@ -6,6 +6,8 @@
     TASK2 - СЛОЖЕНИЕ ВСЕХ СОСТАВЛЯЮЩИХ ЧИСЛА
     TASK3 - СУММА ВСЕХ ПОЛОЖИЬЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
     TASK4 - ВВОД ЛОГИНА И ПАРОЛЯ
+    TASK5 - ИМТ С УКАЗАНИЕМ РАЗНИЦЫ  ЗАДАНИЕ А И Б
+    TASK6 - ВЫВОД ВСЕХ ХОРОШИХ ЧИСЕЛ В ДИАПАЗОНЕ от 1 до 1 000 000 000
 *
 */
 
@@ -22,23 +24,8 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
         static void Pause(string message = "Press any key to continue") { Console.Write(message); Console.ReadKey(); }
         static void Print(string text) { Console.WriteLine(text); }
 
-        public static int IntChecker()
+        static void Minimum(int first, int second, int third)
         {
-            while (true)
-            {
-                String input = Console.ReadLine();
-                if (Int32.TryParse(input, out int result))
-                {
-                    return result;
-                }
-                else
-                {
-                    Print("Please enter the interger number:\n");
-                }
-            }
-        }
-
-        static void Minimum(int first, int second, int third) {
             int min;
 
             if (first < second)
@@ -73,9 +60,11 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
                     Task4();
                     break;
                 case 5:
-
+                    Task5();
+                    break;
                 case 6:
-
+                    Task6();
+                    break;
                 case 7:
                     Print("Will be ready soon.");
                     break;
@@ -84,7 +73,7 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
                     break;
 
             }
-            
+
             Pause();
         }
 
@@ -113,18 +102,36 @@ namespace VLADIMIR_RAEVSKY_GBCS_HM2
 
         static void Task3()
         {
-            //THIRD TASK  - СУММА ВСЕХ ПОЛОЖИЬЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
+            //THIRD TASK  - СУММА ВСЕХ ПОЛОЖИТЕЛЬНЫХ ЧИСЕЛ, БОЛЬШИХ 0
             Print("Enter values to calculate the sum of all positive odd numbers: ");
             int value = int.Parse(Console.ReadLine());
             VarSum(value);
         }
 
         static void Task4()
-        {   
+        {
             //FORTH TASK -  ВВОД ЛОГИНА И ПАРОЛЯ
             Console.Write("Welcome to login window.\nTo sign-up into the system use your username: ");
             string username = Console.ReadLine();
             LoginForm(username);
         }
+
+        static void Task5()
+        {
+            //FIFTH TASK - ИМТ С УКАЗАНИЕМ РАЗНИЦЫ
+            Console.Write("Welcome to BMI index calculatoin.\nEnter your weight: ");
+            double weight = Double.Parse(Console.ReadLine());
+            BMIMod(weight);
+
+        }
+
+        static void Task6()
+        {
+            //SIXTH TASK - ВЫВОД ВСЕХ ХОРОШИХ ЧИСЕЛ В ДИАПАЗОНЕ от 1 до 1 000 000 000
+            Console.Write("Welcome to good number counter. This algorithm will show all good numbers between ");
+            AllGoodNum();
+
+        }
     }
 }
+
